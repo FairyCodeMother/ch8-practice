@@ -1,11 +1,10 @@
-// 1. Begin by adding your component directory
-//    and subdirectories: UI, Users. Then add an
-//    AddUser.js file in Users.
+// 1. Manage the User Input State by saving the
+//    result of each keystroke to the React State.
+//    (go to AddUser)
 
 import React from 'react';
 import AddUser from "./components/Users/AddUser";
 
-// 4. Import and add the AddUser component.
 function App() {
   return (
     <div>
@@ -13,7 +12,5 @@ function App() {
     </div>
   );
 }
-
-// 5. Name a Card file in UI.
 
 export default App;

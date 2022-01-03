@@ -1,36 +1,56 @@
-import React from "react";
+import React, { useState } from "react";
 
-// 8. Import Card and surround the form in it.
 import Card from "../UI/Card";
 import Button from "../UI/Button";
-
-// 9a. Import the classes from the AddUser css.
 import classes from './AddUser.module.css';
 
-// 2. Make a form component that takes user inputs: username, age.
+// 2. Import the useState Hook and initialize it. Make one for
+//    the Username and another for Age. Since we want a different
+//    state for each Username we'll start with an empty string.
 const AddUser = (props) => {
-    // 3a. The submission requires a Handler...
+    const [ enteredUsername, setEnteredUsername ] = useState('');
+    const [ enteredAge, setEnteredAge ] = useState('');
+
+    // 5a. Use the new State setters in the addUserHandler to empty out the State.
     const addUserHandler = (event) => {
-        // 3b. The default for onSubmit is to reload the page so
-        //     we use the preventDefault() method.
         event.preventDefault();
+        setEnteredUsername('');
+        setEnteredAge('');
+        // 5b. Console out the updated Username and Age as proof- console shows update
+        //     but input fields stay unchanged.
+        console.log(enteredUsername, ": ", enteredAge);
     }
 
-    // 9b. Use the classes to name a dynamic className. Now we have
-    //     css getting applied and getting passed into props. (go to Card)
-    // 15. Import and update the button to use our Button.
+    // 3. Create a changeHandler for Username and Age.
+    const usernameChangeHandler = (event) => {
+        setEnteredUsername(event.target.value);
+    }
+
+    const ageChangeHandler = (event) => {
+        setEnteredAge(event.target.value);
+    }
+
+    // 4. Update the input tags to have the new changeHandlers.
+    // 6. Route the updated Username & Age from addUserHandler
+    //    back into the input fields using the values prop.
     return (
         <Card className={classes.input}>
             <form onSubmit={addUserHandler}>
                 <label htmlFor="username">Username</label>
-                <input id="username" type="text" />
+                <input
+                    id="username"
+                    type="text"
+                    onChange={usernameChangeHandler}
+                    value={enteredUsername}
+                />
                 <label htmlFor="age">Age (years)</label>
-                <input id="age" type="text" />
-                <Button
-                    className={}
-                    type="submit"
-                    onClick={}
-                >Add User</Button>
+                <input
+                    id="age"
+                    type="text"
+                    onChange={ageChangeHandler}
+                    value={enteredAge}
+                />
+                <Button type="submit">Add User</Button>
             </form>
         </Card>
     );
