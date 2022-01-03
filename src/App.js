@@ -1,5 +1,4 @@
-// 1. Manage the User Input State by saving the
-//    result of each keystroke to the React State.
+// 1. Add Validation and Logic resetting
 //    (go to AddUser)
 
 import React from 'react';
