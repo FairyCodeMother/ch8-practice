@@ -1,7 +1,7 @@
-// Task: Add ErrorModal Component
-// 1. Create an ErrorModal UI component.
+// Task: In reality, React's Fragment component acts like our Wrapper Component.
+//       Use Fragment like a Wrapper in here.
 
-import React, {useState} from 'react';
+import React, {useState, Fragment} from 'react';
 import AddUser from "./components/Users/AddUser";
 import UsersList from "./components/Users/UsersList";
 
@@ -21,15 +21,16 @@ function App() {
         })
     }
 
+    // 1. Replace the parent div with React's native Fragment.
     return (
-        <div>
+        <Fragment>
             <AddUser
                 onAddUser={addUserHandler}
             />
             <UsersList
                 users={usersList}
             />
-        </div>
+        </Fragment>
     );
 }
 

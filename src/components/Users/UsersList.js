@@ -1,4 +1,3 @@
-// UsersList will output our data in the form of an unordered list.
 import React from "react";
 
 import Card from "../UI/Card";
