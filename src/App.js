@@ -1,5 +1,5 @@
-// Task: In reality, React's Fragment component acts like our Wrapper Component.
-//       Use Fragment like a Wrapper in here.
+// Task: Since modals are overlays, it should not be a nested component.
+//       Use React portals to fix this.
 
 import React, {useState, Fragment} from 'react';
 import AddUser from "./components/Users/AddUser";
@@ -21,7 +21,6 @@ function App() {
         })
     }
 
-    // 1. Replace the parent div with React's native Fragment.
     return (
         <Fragment>
             <AddUser
