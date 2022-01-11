@@ -11,6 +11,12 @@ const AddUser = (props) => {
     // 2. When a new user is added, update the State's name and age with blanks
     const addUserHandler = (event) => {
         event.preventDefault();
+        // 4. Add validation to only make these updates if there's a value to blank
+        if (enteredUsername.trim().length === 0 ||
+            enteredAge.trim().length === 0 ||
+            +enteredAge < 1 ) {
+            return;
+        }
         setEnteredUsername('');
         setEnteredAge('');
         console.log(enteredUsername, ": ", enteredAge);
