@@ -6,8 +6,6 @@ import Card from "../UI/Card";
 import classes from "./UsersList.module.css";
 
 const UsersList = (props) => {
-    // 7. Use the props' id as the key for each child. Each child in a list
-    //    must have a unique "key".
     return (
         <Card className={classes.users}>
             <ul>
