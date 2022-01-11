@@ -8,6 +8,7 @@ const AddUser = (props) => {
     const [ enteredUsername, setEnteredUsername ] = useState('');
     const [ enteredAge, setEnteredAge ] = useState('');
 
+    // 2. When a new user is added, update the State's name and age with blanks
     const addUserHandler = (event) => {
         event.preventDefault();
         setEnteredUsername('');
@@ -23,6 +24,7 @@ const AddUser = (props) => {
         setEnteredAge(event.target.value);
     }
 
+    // 3. Update the age and name value fields using the State values
     return (
         <Card className={classes.input}>
             <form onSubmit={addUserHandler}>

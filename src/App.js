@@ -1,4 +1,4 @@
-// 1. Add Validation and Logic resetting
+// 1. Add Logic Resetting and Data Validation
 //    (go to AddUser)
 
 import React from 'react';
