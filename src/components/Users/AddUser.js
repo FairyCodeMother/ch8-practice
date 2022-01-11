@@ -15,9 +15,12 @@ const AddUser = (props) => {
             +enteredAge < 1 ) {
             return;
         }
+
+        // 6. Upon submission, the values are passed into our new onAddUser prop.
+        // (go to UsersList)
+        props.onAddUser(enteredUsername, enteredAge);
         setEnteredUsername('');
         setEnteredAge('');
-        console.log(enteredUsername, ": ", enteredAge);
     }
 
     const usernameChangeHandler = (event) => {

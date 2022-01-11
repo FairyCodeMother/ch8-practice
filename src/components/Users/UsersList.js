@@ -5,19 +5,16 @@ import Card from "../UI/Card";
 
 import classes from "./UsersList.module.css";
 
-// 3. Wrap the returned item in a Card and set the className to the classes.users
-//    from the module.css file. (go to App)
-//    Remember: At build the classes are dynamically generated into unique
-//              classnames that map to the correct styles.
 const UsersList = (props) => {
-    // 2. Return an object that displays a new line-item per user from the data,
-    //    an array of users, which is passed to us from props. We will call the
-    //    props data "users".
+    // 7. Use the props' id as the key for each child. Each child in a list
+    //    must have a unique "key".
     return (
         <Card className={classes.users}>
             <ul>
                 {props.users.map((user) => (
-                    <li>{user.name} ({user.age} years old)</li>
+                    <li key={user.id}>
+                        {user.name} ({user.age} years old)
+                    </li>
                 ))}
 
             </ul>
