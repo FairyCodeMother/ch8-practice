@@ -53,7 +53,7 @@ const AddUser = (props) => {
                 <ErrorModal
                     title={errorState.title}
                     message={errorState.message}
-                    onAcknowledged={errorHandler}
+                    onConfirm={errorHandler}
                 />
             }
             <Card className={classes.input}>
