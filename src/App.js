@@ -1,5 +1,4 @@
-// Task: Working with Refs to access DOM elements for age and name.
-// go to AddUser.js
+// Task:
 
 import React, {useState, Fragment} from 'react';
 import AddUser from "./components/Users/AddUser";
