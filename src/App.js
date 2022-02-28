@@ -1,6 +1,5 @@
-// Task: Since modals are overlays, it should not be a nested component.
-//       Use React portals to fix this.
-// Go to public/index.html
+// Task: Working with Refs to access DOM elements for age and name.
+// go to AddUser.js
 
 import React, {useState, Fragment} from 'react';
 import AddUser from "./components/Users/AddUser";
